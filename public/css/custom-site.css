@@ -1,0 +1,227 @@
+/********** 12. CUSTOM STYLES **********/
+
+
+/***************************************/
+
+.mt0 {
+    margin-top: 0 !important;
+}
+
+.mt5 {
+    margin-top: 5px !important;
+}
+
+.mt10 {
+    margin-top: 10px !important;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mt25 {
+    margin-top: 25px !important;
+}
+
+.mr10 {
+    margin-right: 10px !important;
+}
+
+.mr20 {
+    margin-right: 20px !important;
+}
+
+.ml5 {
+    margin-left: 5px !important;
+}
+
+.ml10 {
+    margin-left: 10px !important;
+}
+
+.mr5 {
+    margin-right: 5px !important;
+}
+
+.mr10 {
+    margin-right: 10px !important;
+}
+
+.mr15 {
+    margin-right: 15px !important;
+}
+
+.mr20 {
+    margin-right: 20px !important;
+}
+
+.mr30 {
+    margin-right: 30px !important;
+}
+
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.mb8 {
+    margin-bottom: 8px;
+}
+
+.mb9 {
+    margin-bottom: 9px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.nomargin {
+    margin: 0;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.padding15 {
+    padding: 15px;
+}
+
+.padding20 {
+    padding: 20px;
+}
+
+.noborder {
+    border: 0;
+}
+
+.height200 {
+    height: 200px;
+}
+
+.height300 {
+    height: 300px;
+}
+
+.width100p {
+    width: 100%;
+}
+
+.width300 {
+    width: 300px;
+}
+
+.text-black {
+    color: #000;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.inner-addon {
+    position: relative
+}
+
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none
+}
+
+.left-addon .glyphicon {
+    left: 0
+}
+
+.right-addon .glyphicon {
+    right: 0
+}
+
+.left-addon input {
+    padding-left: 30px
+}
+
+.right-addon input {
+    padding-right: 30px
+}
+
+.sort {
+    padding: 8px 30px;
+    border-radius: 6px;
+    border: none;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    background-color: #28a8e0;
+    height: 30px;
+}
+
+.sort:hover {
+    text-decoration: none;
+    background-color: #1b8aba;
+}
+
+.sort:focus {
+    outline: none;
+}
+
+.sort:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    content: "";
+    position: relative;
+    top: -10px;
+    right: -5px;
+}
+
+.sort.asc:after {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+    content: "";
+    position: relative;
+    top: 4px;
+    right: -5px;
+}
+
+.sort.desc:after {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #000;
+    content: "";
+    position: relative;
+    top: -4px;
+    right: -5px;
+}
+
+.pager {
+    margin: 0
+}
+
+.pager li {
+    margin: 0 5px
+}

@@ -1,0 +1,27 @@
+@font-face {
+  font-family: Kanit;
+  src: url(../fonts/Kanit-Light.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+.kn_reg {
+  font-family: Kanit;
+}
+.kn_bold {
+  font-family: Kanit;
+  font-weight: 600;
+}
+.kn_lig {
+  font-family: Kanit;
+  font-weight: lighter;
+}
+.navbar-light {
+  background-color: #1ba8e0;
+  color: white;
+}
+.navbar-light .navbar-brand {
+  color: #FFF;
+}
+.navbar-light .navbar-toggler {
+  background-color: #FFF;
+}
