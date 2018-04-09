@@ -13,7 +13,15 @@
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('test');
+});
+
+Route::get('/portfolio', function () {
+    return view('test');
+});
+
+Route::get('/aboutme', function () {
+    return view('test');
 });
 
 //หน้าแรก
@@ -47,7 +55,7 @@ Route::match(['get','post'],'bill',function(){
 });
 
 //Any 
-Route::get('test', 'TestController@index');
+// Route::get('test', 'TestController@index');
 
 Route::any('poll', 'Auth\LoginController@poll');
 

@@ -1,8 +1,39 @@
 .boxHeight {
+  margin-top: 70px;
   width: 100%;
   height: 100vh;
-  background: url('../images/mint.jpg') no-repeat center;
   position: relative;
+  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  color: white;
+  opacity: 0.95;
+}
+.boxHeight .box-content {
+  display: table;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.boxHeight .box-content .inner-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.boxHeight .box-content .inner-content .content {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 50px;
+  color: #FFF;
+  text-shadow: 2px 2px 4px #000000;
+}
+.boxHeight .box-content .inner-content .content-1 {
+  padding: 0 50px;
+  color: #FFF;
+  text-shadow: 2px 2px 4px #000000;
+}
+.boxHeight .box-content .inner-content .content-2 {
+  padding: 0 50px;
+  color: #FFF;
+  text-shadow: 2px 2px 4px #000000;
 }
 .boxHeight .me {
   width: 100%;
@@ -12,4 +43,46 @@
   top: 0;
   position: absolute;
   bottom: 0;
+  z-index: 1;
+}
+.my-project {
+  margin-top: 70px;
+  width: 100%;
+  height: 100vh;
+  background: url('../images/myProject.jpg') no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+.my-project:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.my-project .box-content {
+  display: table;
+  overflow: hidden;
+  height: 100%;
+  margin: 0 auto;
+}
+.my-project .box-content .inner-box {
+  display: table-cell;
+  vertical-align: middle;
+}
+.my-project .box-content .inner-box .content {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  color: #FFF;
+  text-shadow: 2px 2px 4px #000000;
+}
+.white-color {
+  background: #FFF;
+  border-bottom: 2px solid #CCC;
+}
+.mt50 {
+  margin-top: 50px !important;
 }

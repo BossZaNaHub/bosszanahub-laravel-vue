@@ -18,15 +18,15 @@ const router = new VueRouter({
     mode: 'history',
     routes: [{
             path: '/',
-            name: 'home',
-            component: Home
+            name: 'portfolio',
+            component: Portfolio
         },
         {
             path: '/portfolio',
             name: 'portfolio',
             component: Portfolio,
         },
-         {
+        {
             path: '/aboutme',
             name: 'aboutme',
             component: Aboutme,
@@ -50,4 +50,22 @@ const app = new Vue({
     el: '#app',
     components: { App },
     router,
+    data: {
+        scrollPosition: null
+    },
+    methods: {
+        updateScroll() {
+            this.scrollPosition = window.scrollY
+            var element = document.getElementById("navbar");
+            if (this.scrollPosition > 50){
+                element.classList.add('white-color')
+            }else{
+                element.classList.remove('white-color')
+            }
+        }
+    },
+
+    mounted() {
+        window.addEventListener('scroll', this.updateScroll);
+    }
 });
