@@ -1,16 +1,18 @@
 @extends('layouts.main') @section('content')
+@section('title','Key Performance Indicator')
 <div class="container-fluid">
     <div class="row mb20">
         <div class="col-md-6 col-sm-12">
             <div class="card">
                 <img class="card-img-top img-fluid" src="https://placeimg.com/300/150/any" alt="">
                 <div class="card-body">
-                	<?php foreach ($staff as $s) { ?>
-                    <h5 class="card-title"><?=$s->title_th." ".$s->fname_th." ".$s->lname_th?></h5>
-                    <p class="card-text"><?=$s->dept?>, <?=$s->posit?>&nbsp;<i class="fas fa-user"></i></p>
-                    <p class="card-text"><?=$s->email?>&nbsp;<i class="fas fa-envelope"></i></p>
-                    <p><i class="fas fa-gift"></i>&nbsp;<?php echo date('F j, Y')?></p>
-                    <?php } ?>
+                    @foreach ($staff as $s)           
+                	<h5 class="card-title">{{$s->title}} {{$s->name}} {{$s->last}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{$s->dept}} , {{$s->posit}}</h6>
+                    <p class="card-text"><i class="fas fa-envelope"></i> {{$s->email}}</p>
+                    <p class="card-text"><i class="fas fa-birthday-cake"></i> {{thaidate('d F Y',strtotime($s->birthday))}}</p>
+                    <span class="badge badge-dark">{{$s->role_name}}</span>
+                    @endforeach
                 </div>
             </div>
         </div>

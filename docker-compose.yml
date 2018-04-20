@@ -23,10 +23,20 @@ services:
       - DB_PORT=3306
       - DB_HOST=db
   db:
-    image: mysql:5.7
+    image: mysql:latest
+    volumes: 
+      - ./db:/var/lib/mysql
     environment:
+      - MYSQL_DATABASE=qpaistaf_qpai
       - MYSQL_ROOT_USER=root
       - MYSQL_ROOT_PASSWORD=secret
-      - MYSQL_DATABASE=qpaistaf_qpai
     ports:
       - "3306:3306"
+  pma:
+    image: phpmyadmin/phpmyadmin
+    container_name: kpi-phpmyadmin
+    restart: always
+    links:
+      - db:db
+    ports:
+      - "8000:80"

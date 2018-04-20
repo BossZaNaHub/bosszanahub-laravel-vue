@@ -1,8 +1,10 @@
 <?php
 
-namespace HomeController\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\roleview;
+use Rundiz\Thaidate;
 use DB;
 
 class HomeController extends Controller
@@ -14,7 +16,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $email = env('EMAI_ADDRESS');
+        $this->middleware('auth' , ['only' => '' ]);
+        // $email = env('EMAI_ADDRESS');
         // $query = DB::select('select * from staff where email = :email',['email' => $email]);
         // $role = DB::('staff = ?', $select_session["id_staff"])->fetch();
         // var_dump($query[0]->email);
@@ -29,7 +32,8 @@ class HomeController extends Controller
     public function index()
     {   
         $email = env('EMAI_ADDRESS');
-        $query = DB::select('select * from staff where email = :email',['email' => $email]);
+        // $query = DB::select('select * from staff where email = :email',['email' => $email]);
+        $staff = roleview::where('email',$email)->get();
 
         $css = array(
             'css/index.css',
@@ -42,11 +46,12 @@ class HomeController extends Controller
             'js/home.js'
         );
         $this->data = array(
+            'home' => 'active',
             'main' => 'แสดงรายละเอียด',
             'submain' => '',
             'style' => $css,
             'script' => $js,
-            'staff' => $query,
+            'staff' => $staff,
             'email' => $email
         );
 

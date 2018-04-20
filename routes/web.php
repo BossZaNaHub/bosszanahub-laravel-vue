@@ -13,16 +13,28 @@
 
 
 Route::get('/', function () {
-    return view('test');
-});
+	return view('home');
+})->middleware('auth');
 
-Route::get('/portfolio', function () {
-    return view('test');
-});
+Route::get('/home','HomeController@index');
 
-Route::get('/aboutme', function () {
-    return view('test');
-});
+Route::get('/result/{date?}','ResultController@index');
+
+Route::get('/role','RoleController@index');
+
+Route::get('/email','EmailController@index');
+
+// Route::get('/result', function () {
+// 	return view('performance/result');
+// });
+
+// Route::get('/portfolio', function () {
+//     return view('test');
+// });
+
+// Route::get('/aboutme', function () {
+//     return view('test');
+// });
 
 //หน้าแรก
 // Route::get('/','HomeController@index');
@@ -41,9 +53,9 @@ Route::resource('balance','BscController');
 // });
 
 //Regular Expression
-Route::get('test-regular/{id?}/{name?}', function ($id,$name) {
-    return view('header', ['id' => $id , 'name' => $name]);
-})->where('id','[0-9]+');
+// Route::get('test-regular/{id?}/{name?}', function ($id,$name) {
+//     return view('header', ['id' => $id , 'name' => $name]);
+// })->where('id','[0-9]+');
 
 //Match 
 Route::match(['get','post'],'bill',function(){
@@ -57,10 +69,10 @@ Route::match(['get','post'],'bill',function(){
 //Any 
 // Route::get('test', 'TestController@index');
 
-Route::any('poll', 'Auth\LoginController@poll');
+// Route::any('poll', 'Auth\LoginController@poll');
 
-Route::get('testcon','TestController@index');
+// Route::get('testcon','TestController@index');
 
 Auth::routes();
 
-Route::get('form', 'Auth\LoginController@form');
+// Route::get('form', 'Auth\LoginController@form');

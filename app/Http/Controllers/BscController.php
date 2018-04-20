@@ -1,9 +1,14 @@
 <?php
 
-namespace HomeController\Http\Controllers;
+namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+// use Illuminate\Http\Request;
+/**
+* 
+*/
+/**
+* 
+*/
 class BscController extends Controller
 {
     /**
@@ -20,7 +25,7 @@ class BscController extends Controller
         $js = array(
             'js/moment.js',
             'js/bootstrap-datetimepicker.min.js',
-            'js/bsc.js'
+            'js/bsc.js',
         );
 
         $this->data = array(
@@ -30,7 +35,7 @@ class BscController extends Controller
             'script' => $js
         );
 
-        return view('balance/bsc',$this->data);
+        return view('balance/history',$this->data);
     }
 
     /**
@@ -40,7 +45,24 @@ class BscController extends Controller
      */
     public function create()
     {
-        //
+        $email = env('EMAI_ADDRESS');
+
+        $css = array('css/bootstrap-datetimepicker.min.css');
+
+        $js = array(
+            'js/moment.js',
+            'js/bootstrap-datetimepicker.min.js',
+            'js/bsc.js',
+        );
+
+        $this->data = array(
+            'main' => 'สร้างรายการ Scorecard',
+            'email' => $email,
+            'style' => $css,
+            'script' => $js
+        );
+
+        return view('balance/bsc',$this->data);
     }
 
     /**

@@ -5,11 +5,17 @@
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="navbar">
         <ul class="navbar-nav">
-            <li class="nav-item active"><a class="nav-link" href="#">แสดงรายละเอียด <span class="sr-only">(current)</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Balanced Scorecard Performance</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">ส่งอีเมล์</a></li>
+            <li class="nav-item {{{ (Request::is('home') ? 'active' : '') }}}"><a class="nav-link" href="home">แสดงรายละเอียด <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item dropdown {{{ (Request::is('result') ? 'active' : '') }}} {{{ (Request::is('bsc') ? 'active' : '') }}}">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BSC Performance</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item {{{ (Request::is('bsc') ? 'active' : '') }}}" href="#">Performance</a>
+                    <a class="dropdown-item {{{ (Request::is('result') ? 'active' : '') }}}" href="#">Result</a>
+                </div>
+            </li>
+            <li class="nav-item {{{ (Request::is('email') ? 'active' : '') }}}"><a class="nav-link" href="email">ส่งอีเมล์</a></li>
             <li class="nav-item"><a class="nav-link" href="#">รายงาน (Report)</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">จัดการบทบาท</a></li>
+            <li class="nav-item {{{ (Request::is('role') ? 'active' : '') }}}"><a class="nav-link" href="role">จัดการบทบาท</a></li>
             <li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#manual">คู่มือการใช้งาน</a></li>
         </ul>
         <ul class="navbar-nav">

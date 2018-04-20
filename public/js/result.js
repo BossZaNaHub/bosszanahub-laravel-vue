@@ -1,14 +1,14 @@
-var searchList = new List('users', {
-    valueNames: ['id-staff', 'name', 'dept']
-});
+// var searchList = new List('users', {
+//     valueNames: ['id-staff', 'name', 'dept']
+// });
 
 $(document).ready(function() {
-    $('.datetimepicker').datetimepicker({
+    $('#datetimepicker1').datetimepicker({
         locale: 'en',
         format: 'YYYY-MM',
     }).on('dp.change', function(e) {
         var date = $('#getDate2').val();
-        window.location.href = '/result?date=' + date;
+        // window.location.href = '/result?date=' + date;
 
     });
     $(document).on('click', '.summary', function(event) {
